@@ -15,6 +15,7 @@ Sheep Backups
    options
    usage
    api
+   schedule
 
 
 
