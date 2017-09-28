@@ -1,0 +1,11 @@
+0.0.8
+=====
+
+Build date: 2017-08-31
+
+* Fix restores if they don't include both files and dirs
+
+Commits
+-------
+32a866eaa51c97e887d8874cb6cea35ff1914a97
+891cd8653d5f95381a7924bf0012b6654d13724d

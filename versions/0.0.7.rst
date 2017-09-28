@@ -1,0 +1,12 @@
+0.0.7
+=====
+
+Build date: 2017-08-30
+
+* Fix SheepResponse json calls
+* Added a way to list projects in config file ``$ sheep projects``
+
+Commits
+-------
+b97ff6993f12532090a22d9cc510693e5306faba
+defbf9849dea6083d6107996eb517d8282a43442

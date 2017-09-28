@@ -2,26 +2,26 @@ Usage
 ========
 ``$ sheep -h`` will list all available options.
 
-Version 0.0.3:
+Version 0.0.6:
 
 ::
 
     $ sheep -h
-    usage: sheep [-h] [--prefix PREFIX] [--limit LIMIT] [--test] [--config CONFIG] [-V] [action] [match]
-    
-    Sheep Backups 0.0.3. For more information on the Python cli, visit https://docs.sheepbackups.com/python
+    usage: sheep [-h] [--project PROJECT] [--limit LIMIT] [--test] [--config CONFIG] [-V] [action] [match]
+
+    Sheep Backups 0.0.6. 
     
     positional arguments:
-      action           What action to perform (backup, restore, list, check)
-      match            ID to match
+      action             What action to perform (backup, restore, list, check, ping, schedule)
+      match              ID to match
     
     optional arguments:
-      -h, --help       show this help message and exit
-      --prefix PREFIX  Which prefix to use when searching
-      --limit LIMIT    Number of results returned (default 10)
-      --test           Do a test backup/restore, but don't actually run
-      --config CONFIG  Path to config file (default ~/.sheepbackups/config.yaml)
-      -V, --version    Return this version
+      -h, --help         show this help message and exit
+      --project PROJECT  Which project to use when searching
+      --limit LIMIT      Number of results returned (default 10)
+      --test             Do a test backup/restore, but don't actually run
+      --config CONFIG    Path to config file (default ~/.sheepbackups/config.yaml)
+      -V, --version      Return this version
       
 =======
 Actions
@@ -29,6 +29,7 @@ Actions
 
 backup
 ------
+Runs the backups specified in the config file. This will loop through any projects available, run the required actions, create an archive then upload it to the specified destination. It then calls the API to log an entry on the Sheep Backups website.
 
 restore
 -------
@@ -52,8 +53,9 @@ test
 ----
 Adding the test flag will run through all the available backup options, combine them into a temp directory, archive them, but not call the API or perform the upload. The information will be returned (size, file location, any errors) and you can review the log file or simply delete them after.
 
-prefix
+project
 ------
+Specify which project to return when running ``$ sheep list``
 
 limit
 -----

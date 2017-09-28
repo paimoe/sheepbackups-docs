@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 Sheep Backups
-=========================================
+========================================
 
 .. toctree::
    :maxdepth: 2
@@ -16,6 +16,8 @@ Sheep Backups
    usage
    api
    schedule
+   integrations
+   changelog
 
 
 
